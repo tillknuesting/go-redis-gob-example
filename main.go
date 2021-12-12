@@ -51,7 +51,7 @@ func main() {
 	// struct to Gob
 	bufEn := &bytes.Buffer{}
 	if err := gob.NewEncoder(bufEn).Encode(dataEncode); err != nil {
-		panic(err)
+		log.Println(err)
 	}
 	// buf.Bytes()
 
